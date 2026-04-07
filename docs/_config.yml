@@ -8,15 +8,8 @@ description: "Datenschutzerklärung, Nutzungsbedingungen und Impressum"
 theme: jekyll-theme-minimal
 
 
-# Plugin aktivieren, damit relative Links zwischen Markdown-Dateien funktionieren
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-
-# Liste der Markdown-Dateien, die in der Website gerendert werden sollen
+# Liste der HTML-Dateien, die in der Website enthalten sein sollen
 include:
-  - privacy_policy.md
-  - tos.md
-  - impressum.md
+  - privacy_policy.html
+  - tos.html
+  - impressum.html
