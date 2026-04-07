@@ -1,0 +1,22 @@
+# _config.yml — Jekyll-Konfiguration für GitHub Pages
+
+# Seitentitel und Beschreibung
+title: Fractur App – Rechtliches
+description: "Datenschutzerklärung, Nutzungsbedingungen und Impressum"
+
+
+theme: jekyll-theme-minimal
+
+
+# Plugin aktivieren, damit relative Links zwischen Markdown-Dateien funktionieren
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+
+# Liste der Markdown-Dateien, die in der Website gerendert werden sollen
+include:
+  - privacy_policy.md
+  - tos.md
+  - impressum.md
