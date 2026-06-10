@@ -3,16 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Datenschutzerklärung - Fractur Camera App</title>
+  <title>Datenschutzerklärung / Privacy Policy - Fractur Camera App</title>
   <meta name="description" content="Datenschutzerklärung und Privacy Policy der Fractur Camera App.">
   <style>
-    :root { color-scheme: light; }
+    :root { color-scheme: light dark; }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
       color: #1a1a1a;
       background: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e8e8e8; background: #111111; }
+      a { color: #5b9ef4; }
+      hr { border-top-color: #333; }
+      #lang-toggle { border-color: #555; color: #aaa; }
+      #lang-toggle:hover { background: #222; }
     }
     main {
       max-width: 860px;
@@ -23,7 +30,21 @@
     ul { padding-left: 20px; }
     hr { border: 0; border-top: 1px solid #ddd; margin: 28px 0; }
     a { color: #0a58ca; }
-    nav a { margin-right: 12px; }
+    nav { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+    nav a { text-decoration: none; color: #0a58ca; }
+    nav a:hover { text-decoration: underline; }
+    #lang-toggle {
+      margin-left: auto;
+      background: none;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 0.85em;
+      cursor: pointer;
+      color: #444;
+    }
+    #lang-toggle:hover { background: #f5f5f5; }
+    #lang-de, #lang-en { display: none; }
   </style>
 </head>
 <body>
@@ -31,256 +52,276 @@
     <nav>
       <a href="impressum.html">Impressum / Imprint</a>
       <a href="tos.html">Nutzungsbedingungen / ToS</a>
+      <button id="lang-toggle" type="button">English</button>
     </nav>
 
-    <h1>Datenschutzerklärung - Fractur Camera App</h1>
-    <p>Stand: 07.04.2026</p>
-    <p>Englische Version unten verfügbar - English version below.</p>
+    <!-- DEUTSCH -->
+    <div id="lang-de">
+      <h1>Datenschutzerklärung - Fractur Camera App</h1>
+      <p>Stand: 07.04.2026</p>
 
-    <h2>1. Verantwortlicher (Art. 4 Nr. 7 DSGVO)</h2>
-    <ul>
-      <li>Name: Elian Munkes</li>
-      <li>Anschrift: Burgweg 25, 69198 Schriesheim, Deutschland</li>
-      <li>E-Mail: <a href="mailto:elian.m@outlook.de">elian.m@outlook.de</a></li>
-    </ul>
+      <h2>1. Verantwortlicher (Art. 4 Nr. 7 DSGVO)</h2>
+      <ul>
+        <li>Name: Elian Munkes</li>
+        <li>Anschrift: Burgweg 25, 69198 Schriesheim, Deutschland</li>
+        <li>E-Mail: <a href="mailto:elian.m@outlook.de">elian.m@outlook.de</a></li>
+      </ul>
 
-    <h2>2. Geltungsbereich</h2>
-    <p>
-      Diese Datenschutzerklärung gilt für die mobile App "Fractur Camera App" (nachfolgend "App") und die damit zusammenhängenden Prozesse. Sie erläutert Art, Umfang und Zweck der Verarbeitung personenbezogener Daten bei Nutzung der App.
-    </p>
+      <h2>2. Geltungsbereich</h2>
+      <p>
+        Diese Datenschutzerklärung gilt für die mobile App "Fractur Camera App" (nachfolgend "App") und die damit zusammenhängenden Prozesse. Sie erläutert Art, Umfang und Zweck der Verarbeitung personenbezogener Daten bei Nutzung der App.
+      </p>
 
-    <h2>3. Hosting der Datenschutzerklärung</h2>
-    <p>
-      Diese Datenschutzerklärung wird über GitHub Pages bereitgestellt. Es gelten ergänzend die Datenschutzinformationen von GitHub:
-      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer" target="_blank">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>
-    </p>
+      <h2>3. Hosting der Datenschutzerklärung</h2>
+      <p>
+        Diese Datenschutzerklärung wird über GitHub Pages bereitgestellt. Es gelten ergänzend die Datenschutzinformationen von GitHub:
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer" target="_blank">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>
+      </p>
 
-    <h2>4. Datenkategorien, Zwecke und Rechtsgrundlagen</h2>
+      <h2>4. Datenkategorien, Zwecke und Rechtsgrundlagen</h2>
 
-    <h3>4.1 Kamera-, Mikrofon- und Mediendaten</h3>
-    <ul>
-      <li>Verarbeitet werden Fotos und Videos, die Sie aktiv aufnehmen, sowie optional Mikrofon-Audio bei Videoaufnahmen.</li>
-      <li>Zwecke: Live-Vorschau, Filter, Aufnahme, Rendering, lokale Galerie, Re-Render und Export.</li>
-      <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung/Nutzung der App-Funktionen).</li>
-      <li>Medieninhalte werden nicht an eigene Server übermittelt.</li>
-    </ul>
+      <h3>4.1 Kamera-, Mikrofon- und Mediendaten</h3>
+      <ul>
+        <li>Verarbeitet werden Fotos und Videos, die Sie aktiv aufnehmen, sowie optional Mikrofon-Audio bei Videoaufnahmen.</li>
+        <li>Zwecke: Live-Vorschau, Filter, Aufnahme, Rendering, lokale Galerie, Re-Render und Export.</li>
+        <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung/Nutzung der App-Funktionen).</li>
+        <li>Medieninhalte werden nicht an eigene Server übermittelt.</li>
+      </ul>
 
-    <h3>4.2 Lokale App-Daten auf dem Endgerät</h3>
-    <ul>
-      <li>Die App speichert lokal z. B. Einstellungen (Blitz, Timer, Raster, Onboarding-Status), Favoriten, Nutzungszähler sowie medienbezogene Metadaten (z. B. Effektparameter, Seitenverhältnis, Wiedergabegeschwindigkeit).</li>
-      <li>Zwecke: Funktionsbereitstellung, Personalisierung, Stabilität und Freemium-Limitverwaltung.</li>
-      <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem und wirtschaftlichem App-Betrieb).</li>
-    </ul>
+      <h3>4.2 Lokale App-Daten auf dem Endgerät</h3>
+      <ul>
+        <li>Die App speichert lokal z. B. Einstellungen (Blitz, Timer, Raster, Onboarding-Status), Favoriten, Nutzungszähler sowie medienbezogene Metadaten (z. B. Effektparameter, Seitenverhältnis, Wiedergabegeschwindigkeit).</li>
+        <li>Zwecke: Funktionsbereitstellung, Personalisierung, Stabilität und Freemium-Limitverwaltung.</li>
+        <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem und wirtschaftlichem App-Betrieb).</li>
+      </ul>
 
-    <h3>4.3 Nutzungsanalyse und Fehlerdiagnose</h3>
-    <ul>
-      <li>Google Analytics for Firebase (Nutzungsstatistiken) und Firebase Crashlytics (Fehlerberichte) werden nur genutzt, wenn Sie im Onboarding aktiv zustimmen.</li>
-      <li>Verarbeitet werden insbesondere technische Daten (z. B. App-Instanz-ID, Geräteinformationen, Betriebssystem, ungefähre Nutzungsereignisse, Absturzdaten, IP-Adresse in gekürzter bzw. dienstbedingter Form je nach Anbieterprozess).</li>
-      <li>Es werden keine aufgenommenen Foto- oder Videoinhalte zu Analysezwecken verarbeitet.</li>
-      <li>Rechtsgrundlage: In der EU/im EWR Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). In anderen Rechtsordnungen ggf. zusätzlich Art. 6 Abs. 1 lit. f DSGVO, soweit zulässig.</li>
-      <li>Standardmäßig ist diese Verarbeitung deaktiviert, bis eine Einwilligung erteilt wurde.</li>
-      <li>Sie können die Einwilligung mit Wirkung für die Zukunft in den App-Einstellungen widerrufen. Nach Widerruf wird die weitere Erhebung gestoppt und Analytics-Daten auf diesem Gerät zurückgesetzt.</li>
-    </ul>
+      <h3>4.3 Nutzungsanalyse und Fehlerdiagnose</h3>
+      <ul>
+        <li>Google Analytics for Firebase (Nutzungsstatistiken) und Firebase Crashlytics (Fehlerberichte) werden nur genutzt, wenn Sie im Onboarding aktiv zustimmen.</li>
+        <li>Verarbeitet werden insbesondere technische Daten (z. B. App-Instanz-ID, Geräteinformationen, Betriebssystem, ungefähre Nutzungsereignisse, Absturzdaten, IP-Adresse in gekürzter bzw. dienstbedingter Form je nach Anbieterprozess).</li>
+        <li>Es werden keine aufgenommenen Foto- oder Videoinhalte zu Analysezwecken verarbeitet.</li>
+        <li>Rechtsgrundlage: In der EU/im EWR Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). In anderen Rechtsordnungen ggf. zusätzlich Art. 6 Abs. 1 lit. f DSGVO, soweit zulässig.</li>
+        <li>Standardmäßig ist diese Verarbeitung deaktiviert, bis eine Einwilligung erteilt wurde.</li>
+        <li>Sie können die Einwilligung mit Wirkung für die Zukunft in den App-Einstellungen widerrufen. Nach Widerruf wird die weitere Erhebung gestoppt und Analytics-Daten auf diesem Gerät zurückgesetzt.</li>
+      </ul>
 
-    <h3>4.4 In-App-Käufe und Abonnements</h3>
-    <ul>
-      <li>Zur Verwaltung von Entitlements und Abonnementstatus wird RevenueCat eingesetzt.</li>
-      <li>Zahlungsabwicklungen erfolgen ausschließlich über Apple App Store bzw. Google Play. Es werden keine vollständigen Zahlungsdaten auf eigenen Servern verarbeitet.</li>
-      <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) sowie Art. 6 Abs. 1 lit. c DSGVO für gesetzliche Aufbewahrungs- und Nachweispflichten.</li>
-    </ul>
+      <h3>4.4 In-App-Käufe und Abonnements</h3>
+      <ul>
+        <li>Zur Verwaltung von Entitlements und Abonnementstatus wird RevenueCat eingesetzt.</li>
+        <li>Zahlungsabwicklungen erfolgen ausschließlich über Apple App Store bzw. Google Play. Es werden keine vollständigen Zahlungsdaten auf eigenen Servern verarbeitet.</li>
+        <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) sowie Art. 6 Abs. 1 lit. c DSGVO für gesetzliche Aufbewahrungs- und Nachweispflichten.</li>
+      </ul>
 
-    <h2>5. Empfänger und Rollen</h2>
-    <ul>
-      <li>Firebase (Google): Analyse- und Crash-Services als Auftragsverarbeiter oder eigener Verantwortlicher gemäß Anbieterbedingungen.</li>
-      <li>RevenueCat: Subscription-/Entitlement-Verwaltung als Auftragsverarbeiter oder eigener Verantwortlicher gemaess Anbieterbedingungen.</li>
-      <li>Apple und Google (App-Stores): eigenständig Verantwortliche für Store- und Zahlungsprozesse.</li>
-      <li>Eine darüber hinausgehende Weitergabe erfolgt nur bei gesetzlicher Verpflichtung oder zur Rechtsdurchsetzung.</li>
-    </ul>
+      <h2>5. Empfänger und Rollen</h2>
+      <ul>
+        <li>Firebase (Google): Analyse- und Crash-Services als Auftragsverarbeiter oder eigener Verantwortlicher gemäß Anbieterbedingungen.</li>
+        <li>RevenueCat: Subscription-/Entitlement-Verwaltung als Auftragsverarbeiter oder eigener Verantwortlicher gemäß Anbieterbedingungen.</li>
+        <li>Apple und Google (App-Stores): eigenständig Verantwortliche für Store- und Zahlungsprozesse.</li>
+        <li>Eine darüber hinausgehende Weitergabe erfolgt nur bei gesetzlicher Verpflichtung oder zur Rechtsdurchsetzung.</li>
+      </ul>
 
-    <h3>Datenschutzrichtlinien der eingesetzten Dienste</h3>
-    <ul>
-      <li>Google Firebase (inkl. Analytics und Crashlytics): <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer" target="_blank">https://firebase.google.com/support/privacy</a></li>
-      <li>RevenueCat: <a href="https://www.revenuecat.com/privacy" rel="noopener noreferrer" target="_blank">https://www.revenuecat.com/privacy</a></li>
-      <li>Apple Datenschutz: <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">https://www.apple.com/legal/privacy/</a></li>
-      <li>Google Datenschutz: <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">https://policies.google.com/privacy</a></li>
-    </ul>
+      <h3>Datenschutzrichtlinien der eingesetzten Dienste</h3>
+      <ul>
+        <li>Google Firebase (inkl. Analytics und Crashlytics): <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer" target="_blank">https://firebase.google.com/support/privacy</a></li>
+        <li>RevenueCat: <a href="https://www.revenuecat.com/privacy" rel="noopener noreferrer" target="_blank">https://www.revenuecat.com/privacy</a></li>
+        <li>Apple Datenschutz: <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">https://www.apple.com/legal/privacy/</a></li>
+        <li>Google Datenschutz: <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">https://policies.google.com/privacy</a></li>
+      </ul>
 
-    <h2>6. Drittlandübermittlung (internationaler Datentransfer)</h2>
-    <p>
-      Bei Nutzung bestimmter Dienste (insbesondere Google/Firebase und RevenueCat) können Daten in Staaten außerhalb der EU/des EWR, insbesondere in die USA, übermittelt werden. Soweit kein Angemessenheitsbeschluss besteht, werden geeignete Garantien eingesetzt, insbesondere EU-Standardvertragsklauseln (SCC) und ggf. zusätzliche technische und organisatorische Schutzmaßnahmen.
-    </p>
+      <h2>6. Drittlandübermittlung (internationaler Datentransfer)</h2>
+      <p>
+        Bei Nutzung bestimmter Dienste (insbesondere Google/Firebase und RevenueCat) können Daten in Staaten außerhalb der EU/des EWR, insbesondere in die USA, übermittelt werden. Soweit kein Angemessenheitsbeschluss besteht, werden geeignete Garantien eingesetzt, insbesondere EU-Standardvertragsklauseln (SCC) und ggf. zusätzliche technische und organisatorische Schutzmaßnahmen.
+      </p>
 
-    <h2>7. Speicherdauer</h2>
-    <ul>
-      <li>Lokale Medien- und Einstellungsdaten bleiben auf Ihrem Gerät, bis Sie diese löschen oder die App deinstallieren.</li>
-      <li>Analyse-, Crash- und Kauf-bezogene Daten werden von den jeweiligen Dienstanbietern gemäß deren Richtlinien gespeichert und anschließend gelöscht oder anonymisiert.</li>
-      <li>Gesetzliche Aufbewahrungsfristen bleiben unberührt.</li>
-    </ul>
+      <h2>7. Speicherdauer</h2>
+      <ul>
+        <li>Lokale Medien- und Einstellungsdaten bleiben auf Ihrem Gerät, bis Sie diese löschen oder die App deinstallieren.</li>
+        <li>Analyse-, Crash- und Kauf-bezogene Daten werden von den jeweiligen Dienstanbietern gemäß deren Richtlinien gespeichert und anschließend gelöscht oder anonymisiert.</li>
+        <li>Gesetzliche Aufbewahrungsfristen bleiben unberührt.</li>
+      </ul>
 
-    <h2>8. Ihre Rechte nach DSGVO</h2>
-    <ul>
-      <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
-      <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
-      <li>Recht auf Löschung (Art. 17 DSGVO)</li>
-      <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
-      <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
-      <li>Recht auf Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)</li>
-      <li>Beschwerderecht bei einer Datenschutzaufsichtsbehörde (Art. 77 DSGVO)</li>
-    </ul>
-    <p>Zur Ausübung Ihrer Rechte kontaktieren Sie uns über die oben genannten Kontaktdaten.</p>
+      <h2>8. Ihre Rechte nach DSGVO</h2>
+      <ul>
+        <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+        <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+        <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+        <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+        <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+        <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
+        <li>Recht auf Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)</li>
+        <li>Beschwerderecht bei einer Datenschutzaufsichtsbehörde (Art. 77 DSGVO)</li>
+      </ul>
+      <p>Zur Ausübung Ihrer Rechte kontaktieren Sie uns über die oben genannten Kontaktdaten.</p>
 
-    <h2>9. Datensicherheit</h2>
-    <p>
-      Wir setzen angemessene technische und organisatorische Maßnahmen ein, um personenbezogene Daten gegen Verlust, Missbrauch und unbefugten Zugriff zu schützen. Absolute Sicherheit kann bei digitaler Datenverarbeitung jedoch nicht garantiert werden.
-    </p>
+      <h2>9. Datensicherheit</h2>
+      <p>
+        Wir setzen angemessene technische und organisatorische Maßnahmen ein, um personenbezogene Daten gegen Verlust, Missbrauch und unbefugten Zugriff zu schützen. Absolute Sicherheit kann bei digitaler Datenverarbeitung jedoch nicht garantiert werden.
+      </p>
 
-    <h2>10. Minderjährige</h2>
-    <p>
-      Die App richtet sich nicht gezielt an Kinder unter 16 Jahren. Sofern uns bekannt wird, dass personenbezogene Daten von Kindern ohne erforderliche Zustimmung verarbeitet wurden, werden wir angemessene Schritte zur Löschung einleiten.
-    </p>
+      <h2>10. Minderjährige</h2>
+      <p>
+        Die App richtet sich nicht gezielt an Kinder unter 16 Jahren. Sofern uns bekannt wird, dass personenbezogene Daten von Kindern ohne erforderliche Zustimmung verarbeitet wurden, werden wir angemessene Schritte zur Löschung einleiten.
+      </p>
 
-    <h2>11. Keine ausschließlich automatisierten Entscheidungen</h2>
-    <p>
-      Es findet keine ausschliesslich automatisierte Entscheidungsfindung einschliesslich Profiling im Sinne von Art. 22 DSGVO statt, die rechtliche oder vergleichbar erhebliche Auswirkungen auf Sie hat.
-    </p>
+      <h2>11. Keine ausschließlich automatisierten Entscheidungen</h2>
+      <p>
+        Es findet keine ausschließlich automatisierte Entscheidungsfindung einschließlich Profiling im Sinne von Art. 22 DSGVO statt, die rechtliche oder vergleichbar erhebliche Auswirkungen auf Sie hat.
+      </p>
 
-    <h2>12. Zusätzliche regionale Hinweise</h2>
-    <p>
-      Abhängig von Ihrem Wohnsitz können zusätzliche Rechte nach lokalem Datenschutzrecht gelten (z. B. US-Bundesstaatsgesetze wie California Consumer Privacy Act/CPRA). Entsprechende Anfragen können über die oben genannten Kontaktdaten gestellt werden.
-    </p>
+      <h2>12. Zusätzliche regionale Hinweise</h2>
+      <p>
+        Abhängig von Ihrem Wohnsitz können zusätzliche Rechte nach lokalem Datenschutzrecht gelten (z. B. US-Bundesstaatsgesetze wie California Consumer Privacy Act/CPRA). Entsprechende Anfragen können über die oben genannten Kontaktdaten gestellt werden.
+      </p>
 
-    <h2>13. Änderungen dieser Datenschutzerklärung</h2>
-    <p>
-      Wir können diese Datenschutzerklärung aktualisieren, um rechtliche, technische oder geschäftliche Änderungen abzubilden. Die jeweils aktuelle Version wird über GitHub Pages bereitgestellt.
-    </p>
+      <h2>13. Änderungen dieser Datenschutzerklärung</h2>
+      <p>
+        Wir können diese Datenschutzerklärung aktualisieren, um rechtliche, technische oder geschäftliche Änderungen abzubilden. Die jeweils aktuelle Version wird über GitHub Pages bereitgestellt.
+      </p>
+    </div>
 
-    <hr>
+    <!-- ENGLISH -->
+    <div id="lang-en">
+      <h1>Privacy Policy - Fractur Camera App</h1>
+      <p>Effective date: 2026-04-07</p>
 
-    <h1>Privacy Policy - English Version</h1>
+      <h2>1. Controller (Art. 4(7) GDPR)</h2>
+      <ul>
+        <li>Name: Elian Munkes</li>
+        <li>Address: Burgweg 25, 69198 Schriesheim, Germany</li>
+        <li>Email: <a href="mailto:elian.m@outlook.de">elian.m@outlook.de</a></li>
+      </ul>
 
-    <p>Effective date: 2026-04-07</p>
+      <h2>2. Scope</h2>
+      <p>
+        This Privacy Policy applies to the "Fractur Camera App" (the "App") and related processing activities. It explains what personal data are processed, for which purposes, and on which legal basis.
+      </p>
 
-    <h2>1. Controller (Art. 4(7) GDPR)</h2>
-    <ul>
-      <li>Name: Elian Munkes</li>
-      <li>Address: Burgweg 25, 69198 Schriesheim, Germany</li>
-      <li>Email: <a href="mailto:elian.m@outlook.de">elian.m@outlook.de</a></li>
-    </ul>
+      <h2>3. Hosting of This Policy</h2>
+      <p>
+        This Privacy Policy is published via GitHub Pages. GitHub's own privacy information applies in addition:
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer" target="_blank">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>
+      </p>
 
-    <h2>2. Scope</h2>
-    <p>
-      This Privacy Policy applies to the "Fractur Camera App" (the "App") and related processing activities. It explains what personal data are processed, for which purposes, and on which legal basis.
-    </p>
+      <h2>4. Data Categories, Purposes, and Legal Bases</h2>
 
-    <h2>3. Hosting of This Policy</h2>
-    <p>
-      This Privacy Policy is published via GitHub Pages. GitHub's own privacy information applies in addition:
-      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer" target="_blank">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>
-    </p>
+      <h3>4.1 Camera, Microphone, and Media Data</h3>
+      <ul>
+        <li>The App processes photos and videos you actively create, and optionally microphone audio for video recording.</li>
+        <li>Purposes: live preview, filters, capture, rendering, local gallery, re-render, and export.</li>
+        <li>Legal basis: Art. 6(1)(b) GDPR (performance of contract / provision of App functionality).</li>
+        <li>Media content is not transmitted to our own servers.</li>
+      </ul>
 
-    <h2>4. Data Categories, Purposes, and Legal Bases</h2>
+      <h3>4.2 Local Device Data</h3>
+      <ul>
+        <li>The App stores local data such as settings (flash, timer, grid, onboarding status), favourites, usage counters, and media metadata (e.g., effect settings, aspect ratio, playback speed).</li>
+        <li>Purposes: feature delivery, personalization, app stability, and freemium limit management.</li>
+        <li>Legal basis: Art. 6(1)(b) GDPR and Art. 6(1)(f) GDPR (legitimate interest in secure and reliable app operation).</li>
+      </ul>
 
-    <h3>4.1 Camera, Microphone, and Media Data</h3>
-    <ul>
-      <li>The App processes photos and videos you actively create, and optionally microphone audio for video recording.</li>
-      <li>Purposes: live preview, filters, capture, rendering, local gallery, re-render, and export.</li>
-      <li>Legal basis: Art. 6(1)(b) GDPR (performance of contract / provision of App functionality).</li>
-      <li>Media content is not transmitted to our own servers.</li>
-    </ul>
+      <h3>4.3 Analytics and Crash Diagnostics</h3>
+      <ul>
+        <li>The App uses Google Analytics for Firebase (usage analytics) and Firebase Crashlytics (crash diagnostics) only if you actively consent during onboarding.</li>
+        <li>Processed data may include technical identifiers and diagnostics such as app instance ID, device data, OS version, event data, crash logs, and IP-related data depending on provider processing.</li>
+        <li>No captured photo or video content is used for analytics.</li>
+        <li>Legal basis: in the EU/EEA Art. 6(1)(a) GDPR (consent). In other jurisdictions, Art. 6(1)(f) GDPR may additionally apply where permitted.</li>
+        <li>This processing is disabled by default until consent is granted.</li>
+        <li>You can withdraw consent for future processing in the App settings. After withdrawal, further collection is stopped and analytics data on this device is reset.</li>
+      </ul>
 
-    <h3>4.2 Local Device Data</h3>
-    <ul>
-      <li>The App stores local data such as settings (flash, timer, grid, onboarding status), favourites, usage counters, and media metadata (e.g., effect settings, aspect ratio, playback speed).</li>
-      <li>Purposes: feature delivery, personalization, app stability, and freemium limit management.</li>
-      <li>Legal basis: Art. 6(1)(b) GDPR and Art. 6(1)(f) GDPR (legitimate interest in secure and reliable app operation).</li>
-    </ul>
+      <h3>4.4 In-App Purchases and Subscriptions</h3>
+      <ul>
+        <li>The App uses RevenueCat to manage entitlements and subscription status.</li>
+        <li>Payment transactions are handled by Apple App Store or Google Play. We do not process full payment card data on our own servers.</li>
+        <li>Legal basis: Art. 6(1)(b) GDPR and, where applicable, Art. 6(1)(c) GDPR for legal retention obligations.</li>
+      </ul>
 
-    <h3>4.3 Analytics and Crash Diagnostics</h3>
-    <ul>
-      <li>The App uses Google Analytics for Firebase (usage analytics) and Firebase Crashlytics (crash diagnostics) only if you actively consent during onboarding.</li>
-      <li>Processed data may include technical identifiers and diagnostics such as app instance ID, device data, OS version, event data, crash logs, and IP-related data depending on provider processing.</li>
-      <li>No captured photo or video content is used for analytics.</li>
-      <li>Legal basis: in the EU/EEA Art. 6(1)(a) GDPR (consent). In other jurisdictions, Art. 6(1)(f) GDPR may additionally apply where permitted.</li>
-      <li>This processing is disabled by default until consent is granted.</li>
-      <li>You can withdraw consent for future processing in the App settings. After withdrawal, further collection is stopped and analytics data on this device is reset.</li>
-    </ul>
+      <h2>5. Recipients and Roles</h2>
+      <ul>
+        <li>Firebase (Google): analytics and crash services, acting as processor or independent controller under provider terms.</li>
+        <li>RevenueCat: subscription and entitlement services, acting as processor or independent controller under provider terms.</li>
+        <li>Apple and Google (app stores): independent controllers for store and payment processing.</li>
+        <li>Additional disclosures occur only if legally required or necessary for legal claims/defense.</li>
+      </ul>
 
-    <h3>4.4 In-App Purchases and Subscriptions</h3>
-    <ul>
-      <li>The App uses RevenueCat to manage entitlements and subscription status.</li>
-      <li>Payment transactions are handled by Apple App Store or Google Play. We do not process full payment card data on our own servers.</li>
-      <li>Legal basis: Art. 6(1)(b) GDPR and, where applicable, Art. 6(1)(c) GDPR for legal retention obligations.</li>
-    </ul>
+      <h2>6. International Data Transfers</h2>
+      <p>
+        When using certain providers (especially Google/Firebase and RevenueCat), data may be transferred outside the EU/EEA, including to the United States. Where required, such transfers are based on appropriate safeguards, in particular EU Standard Contractual Clauses (SCCs), and additional technical/organizational measures where applicable.
+      </p>
 
-    <h2>5. Recipients and Roles</h2>
-    <ul>
-      <li>Firebase (Google): analytics and crash services, acting as processor or independent controller under provider terms.</li>
-      <li>RevenueCat: subscription and entitlement services, acting as processor or independent controller under provider terms.</li>
-      <li>Apple and Google (app stores): independent controllers for store and payment processing.</li>
-      <li>Additional disclosures occur only if legally required or necessary for legal claims/defense.</li>
-    </ul>
+      <h2>7. Data Retention</h2>
+      <ul>
+        <li>Local media and settings remain on your device until you delete them or uninstall the App.</li>
+        <li>Analytics, crash, and purchase-related data are retained by respective providers according to their policies and then deleted or anonymized.</li>
+        <li>Statutory retention obligations remain unaffected.</li>
+      </ul>
 
-    <h2>6. International Data Transfers</h2>
-    <p>
-      When using certain providers (especially Google/Firebase and RevenueCat), data may be transferred outside the EU/EEA, including to the United States. Where required, such transfers are based on appropriate safeguards, in particular EU Standard Contractual Clauses (SCCs), and additional technical/organizational measures where applicable.
-    </p>
+      <h2>8. Your Rights</h2>
+      <ul>
+        <li>Right of access (Art. 15 GDPR)</li>
+        <li>Right to rectification (Art. 16 GDPR)</li>
+        <li>Right to erasure (Art. 17 GDPR)</li>
+        <li>Right to restriction of processing (Art. 18 GDPR)</li>
+        <li>Right to data portability (Art. 20 GDPR)</li>
+        <li>Right to object (Art. 21 GDPR)</li>
+        <li>Right to withdraw consent (Art. 7(3) GDPR)</li>
+        <li>Right to lodge a complaint with a supervisory authority (Art. 77 GDPR)</li>
+      </ul>
+      <p>To exercise your rights, contact us using the details above.</p>
 
-    <h2>7. Data Retention</h2>
-    <ul>
-      <li>Local media and settings remain on your device until you delete them or uninstall the App.</li>
-      <li>Analytics, crash, and purchase-related data are retained by respective providers according to their policies and then deleted or anonymized.</li>
-      <li>Statutory retention obligations remain unaffected.</li>
-    </ul>
+      <h2>9. Security</h2>
+      <p>
+        We implement appropriate technical and organizational measures to protect personal data. However, absolute security cannot be guaranteed for digital processing.
+      </p>
 
-    <h2>8. Your Rights</h2>
-    <ul>
-      <li>Right of access (Art. 15 GDPR)</li>
-      <li>Right to rectification (Art. 16 GDPR)</li>
-      <li>Right to erasure (Art. 17 GDPR)</li>
-      <li>Right to restriction of processing (Art. 18 GDPR)</li>
-      <li>Right to data portability (Art. 20 GDPR)</li>
-      <li>Right to object (Art. 21 GDPR)</li>
-      <li>Right to withdraw consent (Art. 7(3) GDPR)</li>
-      <li>Right to lodge a complaint with a supervisory authority (Art. 77 GDPR)</li>
-    </ul>
-    <p>To exercise your rights, contact us using the details above.</p>
+      <h2>10. Children</h2>
+      <p>
+        The App is not specifically directed to children under 16. If we become aware that personal data of children were processed without required consent, we will take appropriate deletion measures.
+      </p>
 
-    <h2>9. Security</h2>
-    <p>
-      We implement appropriate technical and organizational measures to protect personal data. However, absolute security cannot be guaranteed for digital processing.
-    </p>
+      <h2>11. No Solely Automated Decision-Making</h2>
+      <p>
+        We do not perform solely automated decision-making, including profiling, under Art. 22 GDPR that produces legal or similarly significant effects.
+      </p>
 
-    <h2>10. Children</h2>
-    <p>
-      The App is not specifically directed to children under 16. If we become aware that personal data of children were processed without required consent, we will take appropriate deletion measures.
-    </p>
+      <h2>12. Additional Regional Notices</h2>
+      <p>
+        Depending on your place of residence, additional rights may apply under local privacy laws (for example, U.S. state privacy laws such as the California Consumer Privacy Act/CPRA). You can submit related requests using the contact details above.
+      </p>
 
-    <h2>11. No Solely Automated Decision-Making</h2>
-    <p>
-      We do not perform solely automated decision-making, including profiling, under Art. 22 GDPR that produces legal or similarly significant effects.
-    </p>
+      <h2>13. Changes to This Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy to reflect legal, technical, or business changes. The current version will be available via GitHub Pages.
+      </p>
 
-    <h2>12. Additional Regional Notices</h2>
-    <p>
-      Depending on your place of residence, additional rights may apply under local privacy laws (for example, U.S. state privacy laws such as the California Consumer Privacy Act/CPRA). You can submit related requests using the contact details above.
-    </p>
-
-    <h2>13. Changes to This Privacy Policy</h2>
-    <p>
-      We may update this Privacy Policy to reflect legal, technical, or business changes. The current version will be available via GitHub Pages.
-    </p>
-
-    <h2>14. Third-Party Privacy Links</h2>
-    <ul>
-      <li>Google Firebase (Analytics/Crashlytics): <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer" target="_blank">https://firebase.google.com/support/privacy</a></li>
-      <li>RevenueCat: <a href="https://www.revenuecat.com/privacy" rel="noopener noreferrer" target="_blank">https://www.revenuecat.com/privacy</a></li>
-      <li>Apple Privacy: <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">https://www.apple.com/legal/privacy/</a></li>
-      <li>Google Privacy: <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">https://policies.google.com/privacy</a></li>
-    </ul>
-
-    <hr>
-
+      <h2>14. Third-Party Privacy Links</h2>
+      <ul>
+        <li>Google Firebase (Analytics/Crashlytics): <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer" target="_blank">https://firebase.google.com/support/privacy</a></li>
+        <li>RevenueCat: <a href="https://www.revenuecat.com/privacy" rel="noopener noreferrer" target="_blank">https://www.revenuecat.com/privacy</a></li>
+        <li>Apple Privacy: <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">https://www.apple.com/legal/privacy/</a></li>
+        <li>Google Privacy: <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">https://policies.google.com/privacy</a></li>
+      </ul>
+    </div>
   </main>
+
+  <script>
+    function setLang(lang, save) {
+      var isDE = lang === 'de';
+      document.getElementById('lang-de').style.display = isDE ? '' : 'none';
+      document.getElementById('lang-en').style.display = isDE ? 'none' : '';
+      document.getElementById('lang-toggle').textContent = isDE ? 'English' : 'Deutsch';
+      document.documentElement.lang = isDE ? 'de' : 'en';
+      if (save) localStorage.setItem('fractur-legal-lang', lang);
+    }
+
+    var stored = localStorage.getItem('fractur-legal-lang');
+    var auto = (navigator.language || 'de').toLowerCase().startsWith('de') ? 'de' : 'en';
+    setLang(stored || auto);
+
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+      var isDE = document.getElementById('lang-en').style.display === 'none';
+      setLang(isDE ? 'en' : 'de', true);
+    });
+  </script>
 </body>
 </html>
