@@ -18,8 +18,10 @@
       body { color: #e8e8e8; background: #111111; }
       a { color: #5b9ef4; }
       hr { border-top-color: #333; }
-      #lang-toggle { border-color: #555; color: #aaa; }
-      #lang-toggle:hover { background: #222; }
+      .lang-switch { border-color: #444; background: #1c1c1c; }
+      .lang-btn { color: #999; }
+      .lang-btn:hover { color: #e8e8e8; }
+      .lang-btn.active { background: #2a2a2a; color: #5b9ef4; box-shadow: none; }
     }
     main {
       max-width: 860px;
@@ -30,29 +32,42 @@
     ul { padding-left: 20px; }
     hr { border: 0; border-top: 1px solid #ddd; margin: 28px 0; }
     a { color: #0a58ca; }
-    nav { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
-    nav a { text-decoration: none; color: #0a58ca; }
-    nav a:hover { text-decoration: underline; }
-    #lang-toggle {
-      margin-left: auto;
-      background: none;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 3px 10px;
-      font-size: 0.85em;
-      cursor: pointer;
-      color: #444;
+    nav { display: flex; justify-content: flex-end; margin-bottom: 16px; }
+    .lang-switch {
+      display: inline-flex;
+      gap: 2px;
+      padding: 2px;
+      border: 1px solid #d0d0d0;
+      border-radius: 999px;
+      background: #f2f2f2;
     }
-    #lang-toggle:hover { background: #f5f5f5; }
+    .lang-btn {
+      border: 0;
+      background: none;
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.85em;
+      font-weight: 600;
+      color: #555;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-btn:hover { color: #1a1a1a; }
+    .lang-btn.active {
+      background: #ffffff;
+      color: #0a58ca;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+    }
     #lang-en { display: none; }
   </style>
 </head>
 <body>
   <main>
     <nav>
-      <a href="impressum.html">Impressum / Imprint</a>
-      <a href="privacy_policy.html">Datenschutz / Privacy</a>
-      <button id="lang-toggle" type="button">English</button>
+      <div class="lang-switch" role="group" aria-label="Sprache / Language">
+        <button type="button" class="lang-btn" data-lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
     </nav>
 
     <!-- DEUTSCH -->
@@ -208,8 +223,10 @@
       var isDE = lang === 'de';
       document.getElementById('lang-de').style.display = isDE ? 'block' : 'none';
       document.getElementById('lang-en').style.display = isDE ? 'none' : 'block';
-      document.getElementById('lang-toggle').textContent = isDE ? 'English' : 'Deutsch';
       document.documentElement.lang = isDE ? 'de' : 'en';
+      document.querySelectorAll('.lang-btn').forEach(function (b) {
+        b.classList.toggle('active', b.dataset.lang === lang);
+      });
       if (save) localStorage.setItem('fractur-legal-lang', lang);
     }
 
@@ -217,9 +234,8 @@
     var auto = (navigator.language || 'de').toLowerCase().startsWith('de') ? 'de' : 'en';
     setLang(stored || auto);
 
-    document.getElementById('lang-toggle').addEventListener('click', function () {
-      var isDE = document.getElementById('lang-en').style.display === 'none';
-      setLang(isDE ? 'en' : 'de', true);
+    document.querySelectorAll('.lang-btn').forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.dataset.lang, true); });
     });
   </script>
 </body>
