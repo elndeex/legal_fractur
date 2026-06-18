@@ -43,7 +43,7 @@
       color: #444;
     }
     #lang-toggle:hover { background: #f5f5f5; }
-    #lang-de, #lang-en { display: none; }
+    #lang-en { display: none; }
   </style>
 </head>
 <body>
@@ -57,6 +57,7 @@
     <!-- DEUTSCH -->
     <div id="lang-de">
       <h1>Impressum - Fractur Camera App</h1>
+      <p>Stand: 18.06.2026</p>
 
       <h2>Angaben gemäß § 5 TMG</h2>
       <p>
@@ -94,6 +95,7 @@
     <!-- ENGLISH -->
     <div id="lang-en">
       <h1>Imprint - Fractur Camera App</h1>
+      <p>Effective date: 2026-06-18</p>
       <p>This English translation is provided for convenience; the German version is legally binding.</p>
 
       <h2>Information in accordance with § 5 TMG</h2>
@@ -133,8 +135,8 @@
   <script>
     function setLang(lang, save) {
       var isDE = lang === 'de';
-      document.getElementById('lang-de').style.display = isDE ? '' : 'none';
-      document.getElementById('lang-en').style.display = isDE ? 'none' : '';
+      document.getElementById('lang-de').style.display = isDE ? 'block' : 'none';
+      document.getElementById('lang-en').style.display = isDE ? 'none' : 'block';
       document.getElementById('lang-toggle').textContent = isDE ? 'English' : 'Deutsch';
       document.documentElement.lang = isDE ? 'de' : 'en';
       if (save) localStorage.setItem('fractur-legal-lang', lang);

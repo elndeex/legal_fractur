@@ -44,7 +44,7 @@
       color: #444;
     }
     #lang-toggle:hover { background: #f5f5f5; }
-    #lang-de, #lang-en { display: none; }
+    #lang-en { display: none; }
   </style>
 </head>
 <body>
@@ -62,7 +62,7 @@
 
       <h2>1. Geltungsbereich</h2>
       <p>
-        Diese Nutzungsbedingungen regeln das Verhältnis zwischen Ihnen als Nutzer und dem Anbieter der App "fractur camera" (im Folgenden "App"). Mit der Installation und Nutzung der App akzeptieren Sie diese Bedingungen in ihrer jeweils aktuellen Fassung. Wenn Sie diesen Bedingungen nicht zustimmen, dürfen Sie die App nicht nutzen.
+        Diese Nutzungsbedingungen regeln das Verhältnis zwischen Ihnen als Nutzer und dem Anbieter der App "Fractur Camera App" (im Folgenden "App"). Mit der Installation und Nutzung der App akzeptieren Sie diese Bedingungen in ihrer jeweils aktuellen Fassung. Wenn Sie diesen Bedingungen nicht zustimmen, dürfen Sie die App nicht nutzen.
       </p>
 
       <h2>2. Leistungsbeschreibung</h2>
@@ -136,7 +136,7 @@
 
       <h2>1. Scope</h2>
       <p>
-        These Terms of Service govern the relationship between you as the user and the provider of the "fractur camera App" (the "App"). By installing and using the App, you accept these terms as amended from time to time. If you do not agree to these terms, you may not use the App.
+        These Terms of Service govern the relationship between you as the user and the provider of the "Fractur Camera App" (the "App"). By installing and using the App, you accept these terms as amended from time to time. If you do not agree to these terms, you may not use the App.
       </p>
 
       <h2>2. Description of Service</h2>
@@ -206,8 +206,8 @@
   <script>
     function setLang(lang, save) {
       var isDE = lang === 'de';
-      document.getElementById('lang-de').style.display = isDE ? '' : 'none';
-      document.getElementById('lang-en').style.display = isDE ? 'none' : '';
+      document.getElementById('lang-de').style.display = isDE ? 'block' : 'none';
+      document.getElementById('lang-en').style.display = isDE ? 'none' : 'block';
       document.getElementById('lang-toggle').textContent = isDE ? 'English' : 'Deutsch';
       document.documentElement.lang = isDE ? 'de' : 'en';
       if (save) localStorage.setItem('fractur-legal-lang', lang);
